@@ -1,0 +1,38 @@
+// ## Colors
+
+// ### Primary
+
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+// ### Neutral
+
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$desktop-background: '../images/pattern-background-desktop.svg';
+$mobile-background: '../images/pattern-background-mobile.svg';
+
+$font: 'Red Hat Display';
+$mobile: 375px;
+$font-weights: (
+  'medium': 500,
+  'bold': 700,
+  'veryBold': 900,
+);
+
+@function weights($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin flex($justify-content) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify-content;
+}
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}

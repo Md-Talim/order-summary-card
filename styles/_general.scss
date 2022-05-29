@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: $font, sans-serif;
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  color: $desaturated-blue;
+  background: url($desktop-background) no-repeat;
+  background-color: $pale-blue;
+  @include flex(center);
+
+  @include mobile {
+    background: url($mobile-background) no-repeat;
+    background-color: $pale-blue;
+  }
+}
